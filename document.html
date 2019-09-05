@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// alert("警告")
+		</script>
+		<script src="js/jstest.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function showBox(){
+				alert("方法提示")
+				var a=10;
+				if(a>8){
+					// document.write("方法判断")
+					alert("大于8")
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			function showArgmentsBox ( name, age) {
+				alert(name+age)
+			}
+			
+		</script>
+		<script type="text/javascript">
+			function showReturnArgmentsBox ( name, age) {
+				return (name+age)
+			}
+			
+		</script>
+	</head>
+	<body>
+		<p> Hellow world</p>
+		<script type="text/javascript">
+			document.write("Smartisan os<br />")
+			
+			// document.write("罗诗朋")
+			document.write("<h1>标题1</h1>")
+			document.write("<a href='http://www.baidu.com'>百度</a><br />")
+			var x;
+			x=3.15;
+			// alert(x);
+			x="hellow"
+			document.write(x)
+			document.write("<br />")
+			var d=new Date()
+			var hours=d.getHours()
+			// alert(hours)
+			if(hours>20){
+				document.write("深夜")
+			}else{
+				document.write("晚上")
+			}
+		</script>
+		
+		<select name="year">
+			<script type="text/javascript">
+			
+				for(var i=1990;i<=2019;i++){
+					document.write("<option value='"+i+"'>"+i+"</option>")
+					
+				}
+			</script>
+		</select>
+	
+		<!-- <input type="button" name="点击" value="点我" onclick='document.write("Sony")'/> -->
+		<!-- <input type="button" name="点击" value="点我" onclick='alert("Sony")'/> -->
+			<input type="button" name="点击" value="点我" onclick='showBox()'/><br>
+		<input type="button" name="点击1" value="点我1" onclick='showArgmentsBox("HTC : ","12")'/><br>
+		<input type="button" name="点击2" value="点我2" onclick='alert(showReturnArgmentsBox("Google : ","18"))'/><br>
+	</body>
+</html>

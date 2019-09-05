@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function shoAlrt (msg) {
+				try{
+						alert(msg)
+				}catch(e){
+					//TODO handle the exception
+					alert(e.message)
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+			function findID () {
+				var names=document.getElementById("names").value
+				var pId=document.getElementById("pID")
+				if (names=="") {
+					alert("空的")
+				} else{
+					// document.write("<h1 title='标题'>11</h1>")
+					pId.innerHTML="ok"
+				}
+				
+				
+			}
+		</script>
+		
+	</head>
+	<body>
+		<form action="" method="post">
+			<input type="number" name="name" id="names" value="" placeholder="请输入名字"/>
+			<button type="button" onclick="shoAlrt('SmartisanL')">点我</button>
+			<button type="button" onclick="findID()">点我1</button>
+			<p id="pID"></p>
+		</form>
+		
+	</body>
+</html>
