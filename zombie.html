@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var i=0;
+			var t;
+			function startWalk () {
+				alert(t)
+				var z =	document.getElementById("zombie");
+				i++;
+				if (i<8) {
+					z.src="img/z_1_0"+i+".png"
+				} else{
+					i=0;
+				}
+				
+				t=setTimeout("startWalk()",1000);
+		
+			}
+			function stopWalk () {
+				clearTimeout(t);
+				i=0;
+			}
+		</script>
+		
+	</head>
+	<body>
+		<input type="button" name="" id="" value="行走" onclick="startWalk()" />
+		<input type="button" name="" id="" value="停止" onclick="stopWalk()" /><br><br>
+		<img src="img/z_1_01.png" id="zombie" alt="zombie" >
+		
+	</body>
+	
+</html>

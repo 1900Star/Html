@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// var appName=navigator.appName
+			var appName=navigator.userAgent
+			// alert(appName)
+			console.log(appName)
+			
+		</script>
+		<script type="text/javascript">
+			function countDown () {
+				var a=setTimeout("alert('3秒倒计时')",2000)
+			}
+			var num=0;
+			var t;
+			var pFlags;
+			function startTime () {
+				num++;
+			pFlags=	document.getElementById("pFlag");
+			pFlags.innerHTML=num+"s"
+			t=	setTimeout("startTime()",1000)
+			}
+			function stopTime () {
+				clearTimeout(t)
+				pFlags.innerHTML=0;
+				num=0;
+	
+			}
+		</script>
+		
+	</head>
+	<body>
+		<select name="year">
+			<script type="text/javascript">
+				
+				for (var i = 1990; i <= 2019; i++) {
+				<!-- document.write("<option value='year'>"+i+"</option>") -->
+				var str="<option value='year'>year</option>"
+				document.write(str.replace(/year/g,i+""))
+					
+					
+				}
+			</script>
+		</select>
+		<input type="button" name="" id="" value="点我" onclick="countDown()"/>
+		<input type="button" name="" id="" value="开始计时" onclick="startTime()" />
+		<input type="button" name="" id="" value="停止计时" onclick="stopTime()" />
+	</body>
+	<p id="pFlag"></p>
+</html>

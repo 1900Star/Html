@@ -8,6 +8,7 @@
 		</script>
 		<script src="js/jstest.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			// 无参
 			function showBox(){
 				alert("方法提示")
 				var a=10;
@@ -18,12 +19,14 @@
 			}
 		</script>
 		<script type="text/javascript">
+			// 带参
 			function showArgmentsBox ( name, age) {
 				alert(name+age)
 			}
 			
 		</script>
 		<script type="text/javascript">
+			// 带参返回值
 			function showReturnArgmentsBox ( name, age) {
 				return (name+age)
 			}
@@ -58,8 +61,8 @@
 			<script type="text/javascript">
 			
 				for(var i=1990;i<=2019;i++){
-					document.write("<option value='"+i+"'>"+i+"</option>")
-					
+					document.write("<option value=''>"+i+"</option>")
+			
 				}
 			</script>
 		</select>
